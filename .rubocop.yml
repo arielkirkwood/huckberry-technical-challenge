@@ -1,0 +1,16 @@
+require:
+  - rubocop-rails
+
+Style/ClassAndModuleChildren:
+  Enabled: false
+
+Layout/LineLength:
+  Max: 80
+  IgnoredPatterns: ['(\A|\s)#']
+
+AllCops:
+  NewCops: enable
+  Exclude:
+    - Rakefile
+    - 'db/**/*'
+    - bin/**
