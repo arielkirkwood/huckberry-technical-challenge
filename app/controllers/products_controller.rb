@@ -35,6 +35,6 @@ class ProductsController < ApplicationController
   end
 
   def rendered_products
-    ProductBlueprint.render(@products)
+    Products::Blueprint.render(@products)
   end
 end
