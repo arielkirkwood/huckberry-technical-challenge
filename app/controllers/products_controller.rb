@@ -1,9 +1,11 @@
 # frozen_string_literal: true
 
 # Holds logic for our products API, mounted at `/api/products.:format`
-class Api::ProductsController < ApplicationController
+class ProductsController < ApplicationController
+  before_action :set_products
+
   ##
-  # GET /api/products.json
+  # GET /products.json
   #
   # ```json
   # [
@@ -19,12 +21,20 @@ class Api::ProductsController < ApplicationController
   # ```
   #
   def index
-    products = Product.all
-
     respond_to do |format|
       format.json do
-        render json: ProductBlueprint.render(products)
+        render json: rendered_products
       end
     end
+  end
+
+  private
+
+  def set_products
+    @products = Product.all
+  end
+
+  def rendered_products
+    ProductBlueprint.render(@products)
   end
 end
