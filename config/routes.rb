@@ -5,5 +5,5 @@ Rails.application.routes.draw do
     resources :products, only: [:index]
   end
 
-  root to: 'static#index'
+  root to: 'products#index'
 end
