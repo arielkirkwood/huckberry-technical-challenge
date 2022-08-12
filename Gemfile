@@ -23,6 +23,9 @@ gem 'jsbundling-rails'
 gem 'blueprinter'
 gem 'jbuilder'
 
+# Shortcut to good, accessible Web interfaces
+gem 'bootstrap', '~> 4.6.1'
+
 # Use Kredis to get higher-level data types in Redis [https://github.com/rails/kredis]
 # gem "kredis"
 
