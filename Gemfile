@@ -20,7 +20,6 @@ gem 'puma', '~> 5.0'
 gem 'jsbundling-rails'
 
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
-gem 'blueprinter'
 gem 'jbuilder'
 
 # Shortcut to good, accessible Web interfaces

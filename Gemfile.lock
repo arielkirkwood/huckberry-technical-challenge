@@ -75,7 +75,6 @@ GEM
     autoprefixer-rails (10.4.7.0)
       execjs (~> 2)
     bindex (0.8.1)
-    blueprinter (0.25.3)
     bootsnap (1.13.0)
       msgpack (~> 1.2)
     bootstrap (4.6.1)
@@ -254,7 +253,6 @@ PLATFORMS
 
 DEPENDENCIES
   annotate
-  blueprinter
   bootsnap
   bootstrap (~> 4.6.1)
   capybara
