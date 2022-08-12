@@ -1,9 +1,7 @@
 # frozen_string_literal: true
 
 Rails.application.routes.draw do
-  namespace :api, format: true, constraints: { format: :json } do
-    resources :products, only: [:index]
-  end
+  resources :products, only: [:index]
 
   root to: 'products#index'
 end
