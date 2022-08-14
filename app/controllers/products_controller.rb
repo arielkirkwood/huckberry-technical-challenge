@@ -2,11 +2,29 @@
 
 # Holds logic for our products resource, mounted at `/products.:format`
 class ProductsController < ApplicationController
-  before_action :set_products
+  # rubocop:disable Rails/LexicallyScopedActionFilter
+  before_action :set_products, only: :index
+  # rubocop:enable Rails/LexicallyScopedActionFilter
+
+  def create
+    @product = Product.new(product_params)
+
+    if @product.save
+      render json: @product, status: :created, location: @product
+    else
+      render json: @product.errors, status: :unprocessable_entity
+    end
+  end
+
+  def destroy
+    Product.find_by(:sku, params[:sku]).destroy!
+
+    head :no_content
+  end
 
   private
 
   def set_products
-    @products = Product.all
+    @products = Product.order(created_at: :desc).all
   end
 end
