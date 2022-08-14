@@ -6,7 +6,7 @@ Style/ClassAndModuleChildren:
 
 Layout/LineLength:
   Max: 80
-  IgnoredPatterns: ['(\A|\s)#']
+  AllowedPatterns: ['(\A|\s)#']
 
 AllCops:
   NewCops: enable

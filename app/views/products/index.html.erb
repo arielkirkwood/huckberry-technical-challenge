@@ -1,0 +1,9 @@
+<div class="container">
+  <h1>Huckberry Products for sale</h1>
+
+  <% @products.in_groups_of(2, false).each do |product_row| %>
+    <div class="row">
+      <%= render product_row %>
+    </div>
+  <% end %>
+</div>
