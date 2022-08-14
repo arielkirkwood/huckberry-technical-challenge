@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-# Holds logic for our products API, mounted at `/api/products.:format`
+# Holds logic for our products API, mounted at `/products.:format`
 class ProductsController < ApplicationController
   before_action :set_products
 

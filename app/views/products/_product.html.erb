@@ -1,0 +1,10 @@
+<%= render layout: 'containers/card', locals: {id: "product-#{product.sku}"} do %>
+  <%= tag.img src: product.image_url, class: 'card-img-top', alt: '' %>
+  <div class="card-body">
+    <%= tag.h5 product.name, class: 'card-title' %>
+    <%= tag.p product.brand %>
+    <%= tag.p product.price %>
+
+    <a href="#" class="btn btn-primary">Add to cart</a>
+  </div>
+<% end %>
