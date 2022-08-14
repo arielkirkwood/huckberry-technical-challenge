@@ -19,6 +19,10 @@ Rails.application.configure do
   # Enable server timing
   config.server_timing = true
 
+  # Introduces a security vulnerability in order to allow unauth'ed API requests: https://stackoverflow.com/questions/68782454/csrf-tokens-for-rails-api-application
+  # TODO: develop mechanism to be able to submit CSRF tokens with API requests
+  config.action_controller.allow_forgery_protection = false
+
   # Enable/disable caching. By default caching is disabled.
   # Run rails dev:cache to toggle caching.
   if Rails.root.join('tmp/caching-dev.txt').exist?
