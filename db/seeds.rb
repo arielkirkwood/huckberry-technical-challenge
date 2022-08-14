@@ -86,6 +86,16 @@
     category: 'Clothes',
     color: 'Yellow',
     launched_at: Time.zone.parse('2022-05-04T00:00:00Z')
+  },
+  {
+    name: 'Carhartt WIP Relevant Parties Vol.2 Record Bag',
+    sku: 'GID-128',
+    brand: 'Carhartt',
+    price: 125.00,
+    image_url: 'https://cdn.shopify.com/s/files/1/0023/2122/products/07_I030739_14Y_XX-ST-02_RGB_1080x1350px_IG-POST_1200x.jpg',
+    category: 'Gear',
+    color: 'Black',
+    launched_at: Time.zone.parse('2022-08-14T17:18:27.887Z')
   }
 ].each do |product_data|
   Product.where(
