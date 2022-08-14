@@ -1,10 +1,12 @@
-<%= render layout: 'containers/card', locals: {id: "product-#{product.sku}"} do %>
-  <%= tag.img src: product.image_url, class: 'card-img-top', alt: '' %>
-  <div class="card-body">
-    <%= tag.h5 product.name, class: 'card-title' %>
-    <%= tag.p product.brand %>
-    <%= tag.p product.price %>
+<%= tag.div class: "col-#{12/product_iteration.size} mb-3" do %>
+  <%= render layout: 'containers/card', locals: {id: "product-#{product.sku}"} do %>
+    <%= tag.img src: product.image_url, class: 'card-img-top', alt: '' %>
+    <div class="card-body">
+      <%= tag.small product.brand, class: 'text-capitalize text-muted' %>
+      <%= tag.p product.name, class: 'h5 card-title' %>
+      <%= tag.p number_to_currency(product.price, :unit => "$") %>
 
-    <a href="#" class="btn btn-primary">Add to cart</a>
-  </div>
+      <a href="#" class="btn btn-primary stretched-link">Add to cart</a>
+    </div>
+  <% end %>
 <% end %>
